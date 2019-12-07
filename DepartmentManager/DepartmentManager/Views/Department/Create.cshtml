@@ -1,0 +1,33 @@
+﻿@using Vereyon.Web
+@model DepartmentManager.Models.Department
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Create Department</h2>
+@Html.ValidationSummary(true, "Fix the following error")
+@using (Html.BeginForm("Create", "Department"))
+{
+    @Html.RenderFlashMessages()
+    <div class="form-group">
+        @Html.LabelFor(m => m.DepartmentCode)
+        @Html.TextBoxFor(m => m.DepartmentCode, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.DepartmentCode, null, new { @class = "text-danger" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.DepartmentName)
+        @Html.TextBoxFor(m => m.DepartmentName, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.DepartmentName, null, new { @class = "text-danger" })
+    </div>
+    <input type="submit" class="btn btn-primary" value="Save" />
+}
+
+@section scripts
+{
+
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+}
+
