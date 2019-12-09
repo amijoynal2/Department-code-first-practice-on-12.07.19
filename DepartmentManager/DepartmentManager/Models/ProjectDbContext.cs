@@ -9,5 +9,6 @@ namespace DepartmentManager.Models
     public class ProjectDbContext:DbContext
     {
         public DbSet<Department> Departments { get; set; }
+        public DbSet<Student> Students { get; set; }
     }
 }

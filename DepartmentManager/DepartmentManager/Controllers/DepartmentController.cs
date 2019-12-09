@@ -39,10 +39,24 @@ namespace DepartmentManager.Controllers
             {
                 projectDbContext.Departments.Add(department);
                 projectDbContext.SaveChanges();
+
                 FlashMessage.Confirmation("Department saved successfully");
                 return RedirectToAction("Create");
             }
             return View();
+        }
+
+        public ActionResult ViewDetails()
+        {
+            var departments = projectDbContext.Departments.ToList();
+            ViewBag.Departments = new SelectList(departments, "DepartmentId", "DepartmentName");
+            return View();
+        }
+
+        public JsonResult GetAllStudents(int departmentId)
+        {
+            var strudents = projectDbContext.Students.Where(s => s.DepartmentId == departmentId).ToList();
+            return Json(strudents);
         }
 
         public JsonResult IsCodeExist(string departmentcode)
@@ -54,6 +68,13 @@ namespace DepartmentManager.Controllers
             }
             return Json(true, JsonRequestBehavior.AllowGet);
 
+        }
+
+
+        public JsonResult GetStudentById(int id)
+        {
+            var student = projectDbContext.Students.FirstOrDefault(s => s.Id == id);
+            return Json(student);
         }
     }
 }

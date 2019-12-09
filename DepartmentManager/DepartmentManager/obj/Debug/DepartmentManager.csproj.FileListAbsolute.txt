@@ -81,3 +81,4 @@ D:\DepartmnetProject\DepartmentManager\DepartmentManager\bin\EntityFramework.Sql
 D:\DepartmnetProject\DepartmentManager\DepartmentManager\obj\Debug\DepartmentManager.Migrations.initialDatabaseCreationV10.resources
 D:\DepartmnetProject\DepartmentManager\DepartmentManager\obj\Debug\DepartmentManager.csproj.GenerateResource.cache
 D:\DepartmnetProject\DepartmentManager\DepartmentManager\bin\Vereyon.Web.FlashMessage.dll
+D:\DepartmnetProject\DepartmentManager\DepartmentManager\obj\Debug\DepartmentManager.Migrations.studentTable.resources

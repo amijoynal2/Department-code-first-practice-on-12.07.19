@@ -132,6 +132,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\DepartmentController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\StudentsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -139,9 +140,14 @@
     <Compile Include="Migrations\201912070422079_initialDatabaseCreation-V1.0.designer.cs">
       <DependentUpon>201912070422079_initialDatabaseCreation-V1.0.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201912090430356_studentTable.cs" />
+    <Compile Include="Migrations\201912090430356_studentTable.designer.cs">
+      <DependentUpon>201912090430356_studentTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Department.cs" />
     <Compile Include="Models\ProjectDbContext.cs" />
+    <Compile Include="Models\Student.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -184,6 +190,12 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Department\Index.cshtml" />
     <Content Include="Views\Department\Create.cshtml" />
+    <Content Include="Views\Students\Create.cshtml" />
+    <Content Include="Views\Students\Delete.cshtml" />
+    <Content Include="Views\Students\Details.cshtml" />
+    <Content Include="Views\Students\Edit.cshtml" />
+    <Content Include="Views\Students\Index.cshtml" />
+    <Content Include="Views\Department\ViewDetails.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -204,6 +216,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201912070422079_initialDatabaseCreation-V1.0.resx">
       <DependentUpon>201912070422079_initialDatabaseCreation-V1.0.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201912090430356_studentTable.resx">
+      <DependentUpon>201912090430356_studentTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
